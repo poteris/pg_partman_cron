@@ -12,7 +12,6 @@ RUN chown postgres:postgres /usr/share/postgresql/postgresql.conf.sample && \
     chmod 664 /usr/share/postgresql/postgresql.conf.sample
 
 COPY ./entrypoint.sh /usr/local/bin/custom-entrypoint.sh
-COPY ./initdb/setup-users.sql /docker-entrypoint-initdb.d/
 
 RUN chmod +x /usr/local/bin/custom-entrypoint.sh
 
